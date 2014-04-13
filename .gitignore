@@ -1,0 +1,13 @@
+.idea
+*override.php
+*~*
+.buildpath
+.project
+.settings
+var/*
+logs/*
+testdata/*
+todo.txt
+init/
+
+
