@@ -1,19 +1,21 @@
-# Улучшенный скелет web-проекта на Limb
+## Улучшенный скелет web-проекта на Limb
 
-## Инициализация: 
+### Инициализация: 
 ```bash
 # Добавить limb в качестве submodul
 git submodul add git://github.com/rsajob/limb.git lib/limb
 ```
 
-## Структура проекта
+### Структура проекта
 
 Основное отличие от стандартного скелета в пакете web_app в том что в папке `src` 
 можно организовасть структуру пакетов (можно назвать модули) аналогично как это 
-сделанов самом Limb
+сделанов самом Limb.
 
-/src/_main/ - это главный пакет который добавляется всегда первым
-/src/auth/ - например пакет отвечающий за авторизацию пользователей
+Пример:
+
+* `/src/_main/` - это главный пакет который добавляется всегда первым
+* `/src/auth/` - например пакет отвечающий за авторизацию пользователей
 
 Вообще это сделано для удобства структурировани и повтороного использования кода. 
 
@@ -23,11 +25,10 @@ git submodul add git://github.com/rsajob/limb.git lib/limb
 /src/<pack>/settings/ - файлы конфигурации
 /src/<pack>/src/ - код
 /src/<pack>/src/controller/ - контроллеры
-
 /src/<pack>/template/ - шаблоны
 ```
 
-### изменеия в настройках поиска шаблонов (в `settings/macro.conf.php`)
+### Изменеия в настройках поиска шаблонов (в `settings/macro.conf.php`)
 ```php
 $conf['tpl_scan_dirs'] 		= array('template',  'src/*/template',  'limb/*/src/template');
 $conf['tags_scan_dirs'] 	= array('src/macro', 'src/*/src/macro', 'limb/*/src/macro', 	'limb/macro/src/tags');
